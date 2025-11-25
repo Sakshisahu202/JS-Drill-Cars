@@ -54,9 +54,12 @@ let inventory = [{"id":1,"car_make":"Lincoln","car_model":"Navigator","car_year"
 // ==== Problem #6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory.  Execute a function and return an array that only contains BMW and Audi cars.  Once you have the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
 
-
+let array = [];
 for(let val of inventory){
     if(val.car_make === "Audi" || val.car_make === "BMW"){
-      console.log(val);
+      array.push(val);
     }
 }
+console.log(array);
+const jsonString = JSON.stringify(array);//The JSON.stringify() method in JavaScript converts a JavaScript object or value to a JSON string.
+console.log(jsonString); 
